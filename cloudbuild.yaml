@@ -64,7 +64,7 @@ options:
     - SQL_FILE_PATH = [GCP_Terraform/table.sql]
   entrypoint: 'sh'
   args:
-  - '-c'
-  - |
-     psql -U $DB_USERNAME -W -d $DB_NAME -f $SQL_FILE_PATH
+    - '-c'
+    - |
+      psql -U $DB_USERNAME -W -d $DB_NAME -f $SQL_FILE_PATH
 # [END execute-sql]
