@@ -10,9 +10,6 @@ steps:
       else
         for dir in GCP_Terraform
         do 
-          echo ""
-          echo "*************** TERRAFORM INIT ******************"
-          echo "*************************************************"
           terraform init || exit 1
         done
       fi 
@@ -46,8 +43,6 @@ steps:
       if [ -d "GCP_Terraform" ]; then    
         terraform apply -lock=false -auto-approve
       else
-        echo "***************************** SKIPPING APPLYING *******************************"
-        echo "*******************************************************************************"
       fi
 # [END tf-apply]
 
@@ -59,7 +54,7 @@ steps:
     - DB_USERNAME : rahul
     - DB_PASSWORD : rahul
     - DB_NAME : pstgsq
-    - SQL_FILE_PATH : GCP_Terraform/table.sql'
+    - SQL_FILE_PATH : 'GCP_Terraform/table.sql'
   entrypoint: 'sh'
   args:
     - '-c'
