@@ -21,7 +21,7 @@ resource "google_sql_database" "database" {
 
 
 resource "google_sql_database_instance" "instance" {
-  name             = "PSQ_1"
+  name             = "pstgsq"
   region           = "us-west1"
   database_version = "POSTGRES_14"
   settings {
