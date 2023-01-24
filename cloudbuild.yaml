@@ -51,7 +51,7 @@ steps:
   args:
     - '-c'
     - |
-      psql -U $DB_USERNAME -W -d $DB_NAME -f $SQL_FILE_PATH
+      psql -U ${DB_USERNAME} -W -d ${DB_NAME} -f ${SQL_FILE_PATH}
 # [END execute-sql]
 
 timeout: 1800s
