@@ -48,9 +48,9 @@ steps:
 - id: Execute SQL file
   name: postgres:14
   env:
-    - DB_USERNAME : [rahul]
-    - DB_PASSWORD : [rahul]
-    - DB_NAME : [pstgsq]
+    - DB_USERNAME : rahul
+    - DB_PASSWORD : rahul
+    - DB_NAME : pstgsq
     - SQL_FILE_PATH : ['GCP_Terraform/table.sql']
   entrypoint: 'sh'
   args:
