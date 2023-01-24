@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = file(var.credentials_file)
+  credentials = file(bucket-function-datastore-e5cdd29962e8.json)
 
   project = var.project
   region  = var.region
