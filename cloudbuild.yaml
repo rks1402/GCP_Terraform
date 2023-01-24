@@ -8,7 +8,7 @@ steps:
       if [ -d "GCP_Terraform" ]; then
         terraform init
       else
-        for dir in GCP_Terraform
+        for dir in GCP_Terraform/
         do 
           terraform init || exit 1
         done
@@ -25,9 +25,6 @@ steps:
       else
         for dir in GCP_Terraform/
         do 
-          echo ""
-          echo "*************** TERRAFOM PLAN ******************"
-          echo "*************************************************"
           terraform plan -lock=false || exit 1
         done
       fi 
