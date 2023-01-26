@@ -40,6 +40,7 @@ steps:
       if [ -d "GCP_Terraform" ]; then    
         terraform apply -lock=false -auto-approve
       else
+      fi
 # [END tf-apply]
 
 
