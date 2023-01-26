@@ -53,6 +53,6 @@ steps:
 #      psql -U ${DB_USERNAME} -W -d ${DB_NAME} -f ${SQL_FILE_PATH}
 # [END execute-sql]
 
-timeout: 1800s
-options:
-  logging: CLOUD_LOGGING_ONLY
+#timeout: 1800s
+#options:
+#  logging: CLOUD_LOGGING_ONLY
