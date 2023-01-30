@@ -21,6 +21,7 @@ module "database" {
 module "database-instance" {
   source  = "../../modules/database-instance"
   project = "${var.project}"
+  subnet  = "${module.vpc.subnet}"
 }
 
 module "users" {
