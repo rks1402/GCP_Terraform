@@ -16,6 +16,7 @@ module "vpc" {
 module "database" {
   source  = "../../modules/database"
   project = "${var.project}"
+  subnet  = "${module.vpc.subnet}"
 }
 
 module "database-instance" {
@@ -27,6 +28,7 @@ module "database-instance" {
 module "users" {
   source  = "../../modules/users"
   project = "${var.project}"
+  subnet  = "${module.vpc.subnet}"
 }
 
 module "firewall" {
