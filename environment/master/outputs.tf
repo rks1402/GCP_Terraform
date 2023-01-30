@@ -10,6 +10,3 @@ output "firewall_rule" {
   value = "${module.firewall.firewall_rule}"
 }
 
-output "instance_name" {
-  value = "${module.database-instance.instance_name}"
-}
